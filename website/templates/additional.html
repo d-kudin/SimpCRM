@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+{% if user.is_authenticated %}
+
+<table class="table table-striped table-hover table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">Imię i nazwisko</th>
+      <th scope="col">Adres mailowy</th>
+      <th scope="col">Telefon</th>
+      <th scope="col">Adres</th>
+      <th scope="col">Miejscowość</th>
+      <th scope="col">Województwo</th>
+      <th scope="col">Kod pocztowy</th>
+      <th scope="col">Utworzono</th>
+      <th scope="col">ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+{% if records %}
+  {% for record in records %}
+    <tr>
+      <td><a href="{% url 'record' record.id %}">{{ record.imie }} {{ record.nazwisko }}</a></td>
+      <td>{{ record.email }}</td>
+      <td>{{ record.nr_telefonu }}</td>
+      <td>{{ record.adres }}</td>
+      <td>{{ record.miasto }}</td>
+      <td>{{ record.wojewodztwo }}</td>
+      <td>{{ record.kod_pocztowy }}</td>
+      <td>{{ record.utworzono }}</td>
+      <td><a href="{% url 'record' record.id %}">{{ record.id }}</a></td>
+    </tr>
+  {% endfor %}
+
+{% endif %}
+
+  
+    </tbody>
+  </table>
+
+{% else %}
+
+<div class="col-md-6 offset-md-3">
+<h1>Logowanie</h1>
+<br/>
+
+<form method="POST" action="{% url 'home' %}">
+	{% csrf_token %}
+
+  <div class="mb-3">
+    <input type="text" class="form-control" name="username", placeholder="Nazwa użytkownika" required>
+    
+  </div><br/>
+  <div class="mb-3">
+    <input type="password" class="form-control" name="password", placeholder="Hasło" required>
+  </div>
+  <br/>
+  <button type="submit" class="btn btn-secondary">Zaloguj się</button>
+
+</form>
+
+
+
+{% endif %}
+
+{% endblock %} 
