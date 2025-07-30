@@ -57,20 +57,17 @@ Above features are integrated directly into the homepage and styled to match the
 Download and unzip the project archive. Open the extracted folder in your preferred IDE (e.g., Visual Studio Code).
 ```
 #### OR
-```
+
 ### 1b. Clone the repository
 ```
 git clone https://github.com/d-kudin/SimpCRM.git
-```
 cd SimpCRM
 ```
 
 ### 2. Create and Activate a Virtual Environment
 ```
 python -m venv venv
-```
 venv\Scripts\activate  # Windows
-```
 source venv/bin/activate  # Linux / macOS
 ```
 
@@ -86,11 +83,11 @@ your_secret_key
 your_openweather_api_key
 your_news_api_key
 your_holiday_api_key
-
 ```
+
 Where to get the API keys?
-```
 
+```
 Django SECRET_KEY:
 Generate a strong key using:
 
