@@ -152,11 +152,25 @@ If holidays/weather/news display incorrectly, verify your API keys and internet 
 ---
 
 **FRONTEND:**
+
+---
+
 ![alt text](homepage_1.png)
+
+---
+
 <img width="1803" height="931" alt="image" src="https://github.com/user-attachments/assets/44f4ec84-506e-44eb-b0f8-47b6576778e0" />
+
+---
+
 <img width="1853" height="942" alt="image" src="https://github.com/user-attachments/assets/9ba52cd0-a009-4303-9af9-dfd6010ac6a3" />
 
 ---
 
 **BACKEND:**
+
+---
+
 ![alt text](backend.png)
+
+---
