@@ -61,13 +61,16 @@ Download and unzip the project archive. Open the extracted folder in your prefer
 ### 1b. Clone the repository
 ```
 git clone https://github.com/d-kudin/SimpCRM.git
+```
 cd SimpCRM
 ```
 
 ### 2. Create and Activate a Virtual Environment
 ```
 python -m venv venv
+```
 venv\Scripts\activate  # Windows
+```
 source venv/bin/activate  # Linux / macOS
 ```
 
