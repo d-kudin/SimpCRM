@@ -136,9 +136,9 @@ Backend:
 ---
 
 ## Run Tests (All unit tests should pass)
----
+```
 python manage.py test
----
+```
 
 ## Additional Notes
 Default database: SQLite (db.sqlite3)
