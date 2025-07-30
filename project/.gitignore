@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+*.log
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Django SQLite DB
+db.sqlite3
+test_db.sqlite3
+
+# Sensitive credentials
+Login_haslo_superuser.txt
+
+# IDE/editor configs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Byte-compiled/mypy/pytest cache
+.mypy_cache/
+.pytest_cache/
+coverage.xml
+htmlcov/
+__coverage__/
+
+# Django static/media files
+/staticfiles/
+media/
+
+# Test output
+*.coverage
+coverage/
+
+# VSCode Jupyter notebooks or settings
+.ipynb_checkpoints/
+*.ipynb

@@ -1,0 +1,6 @@
+Django
+pytest
+pytest-django
+requests
+python-dotenv
+faker

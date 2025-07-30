@@ -1,0 +1,52 @@
+<!--website/templates/navbar.html-->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark position-relative">
+  <div class="container-fluid">
+
+    <!-- LEFT SIDE: auth links -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'add_record' %}">Add Client</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'register' %}">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Login</a>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+
+    <!-- CENTER: SimpCRM brand -->
+    <a class="navbar-brand position-absolute start-50 translate-middle-x" href="{% url 'home' %}">SimpCRM</a>
+
+    <!-- RIGHT SIDE: Weather & Holidays -->
+    <div class="d-none d-lg-block text-white text-end ms-auto">
+      {% if weather %}
+        <div>{{ weather.city }} {{ weather.temperature }}°C, {{ weather.description }}</div>
+      {% endif %}
+      {% if holidays %}
+        <div>
+          {% for holiday in holidays %}
+            {{ holiday.name }}{% if not forloop.last %}, {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- Mobile toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  </div>
+</nav>

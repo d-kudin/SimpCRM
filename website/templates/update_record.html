@@ -1,0 +1,18 @@
+<!--website/templates/update_record.html-->
+
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="col-md-6 offset-md-3">
+  <h2 class="mt-4">Update Client</h2>
+  <hr/>
+
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary mt-3">Update</button>
+    <a href="{% url 'home' %}" class="btn btn-secondary mt-3 ms-2">Cancel</a>
+  </form>
+</div>
+
+{% endblock %}
